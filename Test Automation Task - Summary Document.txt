@@ -1,0 +1,34 @@
+Python Script Summary document:
+
+This document will help to provide an overview on the Test Automation script written in Selenium & Python using Pycharm Editor. 
+
+The 8 steps to be automated were as follows: 
+
+1. Open site https://magento.softwaretestingboard.com/
+2. Add to cart 4 - Gwyn Endurance Tee Medium Green
+3. Address should United Kingdom
+4. Check cart total is $92.00 (discount applied)
+5. Update the Quantity of  Gwyn Endurance Tee Medium Green to 3
+6. Add to cart 1 - Gwyn Endurance Tee Small Yellow
+7. Add to cart 1 Quest Lumaflex™ Band
+8. Check cart total is $116.00
+
+To automate the above 8 steps, below approach was followed:
+
+- Import the required Python libraries & Selenium web drivers
+- 3 function definitions were utilized namely:
+	1. selectProduct - helps in searching the item from the search bar and select the specified item's color, size and quantity
+	2. CheckOut - helps to open and view the cart items summary
+	3. validateTotal - helps to compare the expected total amount with the actual cart total amount
+
+- The forementioned functions were called throughout the script to achieve/validate the desired output
+- The output observed with the script were as follows:
+	1. The Cart Total of $92.00  is successful at step #4
+	2. The Cart Total of $116.00  is not successful at step #8
+
+The Cart Totals have been duly printed with necessary print statements in validateTotal() function calls. Lastly, it was observed that the webpage takes certain 
+amount of time to load and the same is accomodated into the script via Sleep/Wait() statements
+ 
+Observation:
+After following the sequence of Step 1-7; the cart total observed was $115; which was different from the expected value of $116 (in Step 8). So, the validation 
+check was done accordingly.
